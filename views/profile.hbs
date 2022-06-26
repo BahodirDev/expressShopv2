@@ -1,0 +1,43 @@
+<div class="gradient">
+    <div id="panel" class="">
+        <div id="inside-panel">
+            <div class="gradient-border">
+                <div class="img_filed">
+                   {{#if user.avatarUrl}}
+                         <img src="{{user.avatarUrl}}" alt="img">
+                   {{else}}
+                         <img src="/img/profile.jpg" alt="img">
+                   {{/if}}
+                </div>
+                <div class="profile">
+                    <h4>{{user.name}}</h4>
+                    <p>{{user.email}}</p>
+                </div>
+                <div>
+                    <form action="/profile" method="post" enctype="multipart/form-data">
+
+                        <div class="basketBox">
+                            <input type="text" name="name" class="form-control" placeholder="Enter your name">
+                        </div>
+                        <div class="basketBox">
+                            <div class="file-field input-field">
+                                <div class="btn">
+                                    <span>File</span>
+                                    <input type="file" name="avatar" >
+                                </div>
+                                <div class="file-path-wrapper">
+                                    <input class="file-path validate"  type="text"
+                                        placeholder="Upload one or more files">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="basketBox">
+                            <button type="submit" class="btn teal accent-4 w-100 m-2">Change</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
